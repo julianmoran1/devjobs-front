@@ -13,7 +13,7 @@ const JobDetail = () => {
   useEffect(() => {
     if (!id) return
 
-    fetch(`http://localhost:1234/jobs/${id}`)
+    fetch(`https://devjobs-back.vercel.app/jobs/${id}`)
       .then((response) => response.json())
       .then((data) => setJob(data))
       .catch((error) => {
