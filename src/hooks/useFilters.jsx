@@ -50,7 +50,7 @@ const useFilters = () => {
 
         const queryParams = params.toString()
 
-        const response = await fetch(`http://localhost:1234/jobs?${queryParams}`)
+        const response = await fetch(`https://devjobs-back.vercel.app/jobs?${queryParams}`)
         const json = await response.json()
         setJobs(json.data)
         setTotal(json.total)
